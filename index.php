@@ -1,3 +1,12 @@
+<?php
+if(isset($_POST['submit'])){
+  
+}else{
+    echo "Your name sucks we coudn't submit it";
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,11 +54,16 @@
    background: crimson;
 
 }
+
+.footer{
+    position:relative;
+    left:550px;
+    top:50px;
+}
+
 </style>
 <body>
-    <h1 class="hero">
-   The user's name is
-    </h1>
+    <h1 class="hero"><?php echo "The user's name is  " .$_POST['name']; ?></h1>
     <div class="container">
         <div class="holder">
             <form action="index.php" method="POST">
